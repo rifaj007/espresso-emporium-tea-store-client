@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 import addCoffeeBg from "../assets/images/more/add-coffee-bg.png";
+import Swal from 'sweetalert2'
 
 const AddCoffee = () => {
   const handleAddCoffee = (event) => {
@@ -16,7 +17,27 @@ const AddCoffee = () => {
     const photo = form.photo.value;
 
     const newCoffee = { name, chef, supplier, taste, category, details, photo };
-    console.log(newCoffee);
+
+    fetch('http://localhost:5000/coffees', {
+      method: "POST",
+      headers: {
+         "content-type": "application/json"
+      },
+      body: JSON.stringify(newCoffee)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+
+      if(data.insertedId){
+         Swal.fire({
+            title: 'Success!',
+            text: 'Coffee added sucessfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
+      }
+    })
 
     form.reset();
   };
