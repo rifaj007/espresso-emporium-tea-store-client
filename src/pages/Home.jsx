@@ -11,92 +11,101 @@ import instaImg_5 from "../assets/images/cups/insta-5.png";
 import instaImg_6 from "../assets/images/cups/insta-6.png";
 import instaImg_7 from "../assets/images/cups/insta-7.png";
 import instaImg_8 from "../assets/images/cups/insta-8.png";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { TbMug } from "react-icons/tb";
 
 const Home = () => {
+  const loadedCoffee = useLoaderData();
+
+  console.log(loadedCoffee);
+
   return (
     <div>
       {/* Banner section start */}
       <div
-        className="h-[800px] bg-cover bg-center bg-no-repeat text-white flex justify-end items-center"
+        className="h-[800px] bg-cover bg-center bg-no-repeat text-white"
         style={{ backgroundImage: `url(${bannerBg})` }}
       >
-        <div>
-          <h1 className="text-[55px] font-rancho mb-4">
-            Would you like a Cup of Delicious Coffee?
-          </h1>
-          <p className="text-base mb-8">
-            It&apos;s coffee time - Sip & Savor - Relaxation in every sip! Get
-            the nostalgia back!! Your companion of <br /> every moment!!! Enjoy
-            the beautiful moments and make them memorable.
-          </p>
-          <button className="bg-[#E3B577] border-2 border-[#E3B577] text-[#242222] text-2xl font-rancho py-2 px-5 hover:bg-transparent hover:text-white hover:border-2 hover:border-white duration-300">
-            Learn more
-          </button>
+        <div className="container flex justify-end items-center h-full">
+          <div>
+            <h1 className="text-[55px] font-rancho mb-4">
+              Would you like a Cup of Delicious Coffee?
+            </h1>
+            <p className="text-base mb-8">
+              It&apos;s coffee time - Sip & Savor - Relaxation in every sip! Get
+              the nostalgia back!! Your companion of <br /> every moment!!!
+              Enjoy the beautiful moments and make them memorable.
+            </p>
+            <button className="bg-[#E3B577] border-2 border-[#E3B577] text-[#242222] text-2xl font-rancho py-2 px-5 hover:bg-transparent hover:text-white hover:border-2 hover:border-white duration-300">
+              Learn more
+            </button>
+          </div>
         </div>
       </div>
       {/* Banner section end */}
 
       {/* Features section start */}
-      <div className="bg-[#ECEAE3] flex gap-10 py-14 mb-[120px]">
-        {/* Features 1 */}
-        <div>
-          <div className="mb-4">
-            <img src={featuresIcon_1} alt="" />
-          </div>
+      <div className="bg-[#ECEAE3]  py-14 mb-[120px]">
+        <div className="container flex gap-10">
+          {/* Features 1 */}
           <div>
-            <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
-              Awesome Aroma
-            </h3>
-            <p className="text-base text-[#1B1A1A] mb-2">
-              You will definitely be a fan of the design & aroma of your coffee
-            </p>
+            <div className="mb-4">
+              <img src={featuresIcon_1} alt="" />
+            </div>
+            <div>
+              <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
+                Awesome Aroma
+              </h3>
+              <p className="text-base text-[#1B1A1A] mb-2">
+                You will definitely be a fan of the design & aroma of your
+                coffee
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Features 2 */}
-        <div>
-          <div className="mb-4">
-            <img src={featuresIcon_2} alt="" />
-          </div>
+          {/* Features 2 */}
           <div>
-            <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
-              High Quality
-            </h3>
-            <p className="text-base text-[#1B1A1A] mb-2">
-              We served the coffee to you maintaining the best quality
-            </p>
+            <div className="mb-4">
+              <img src={featuresIcon_2} alt="" />
+            </div>
+            <div>
+              <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
+                High Quality
+              </h3>
+              <p className="text-base text-[#1B1A1A] mb-2">
+                We served the coffee to you maintaining the best quality
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Features 3 */}
-        <div>
-          <div className="mb-4">
-            <img src={featuresIcon_3} alt="" />
-          </div>
+          {/* Features 3 */}
           <div>
-            <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
-              Pure Grades
-            </h3>
-            <p className="text-base text-[#1B1A1A] mb-2">
-              The coffee is made of the green coffee beans which you will love
-            </p>
+            <div className="mb-4">
+              <img src={featuresIcon_3} alt="" />
+            </div>
+            <div>
+              <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
+                Pure Grades
+              </h3>
+              <p className="text-base text-[#1B1A1A] mb-2">
+                The coffee is made of the green coffee beans which you will love
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Features 4 */}
-        <div>
-          <div className="mb-4">
-            <img src={featuresIcon_4} alt="" />
-          </div>
+          {/* Features 4 */}
           <div>
-            <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
-              Proper Roasting
-            </h3>
-            <p className="text-base text-[#1B1A1A] mb-2">
-              Your coffee is brewed by first roasting the green coffee beans
-            </p>
+            <div className="mb-4">
+              <img src={featuresIcon_4} alt="" />
+            </div>
+            <div>
+              <h3 className="text-[35px] font-rancho text-[#331A15] mb-2">
+                Proper Roasting
+              </h3>
+              <p className="text-base text-[#1B1A1A] mb-2">
+                Your coffee is brewed by first roasting the green coffee beans
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -144,30 +153,32 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-6">
-          <div>
-            <img src={instaImg_1} alt="" />
-          </div>
-          <div>
-            <img src={instaImg_2} alt="" />
-          </div>
-          <div>
-            <img src={instaImg_3} alt="" />
-          </div>
-          <div>
-            <img src={instaImg_4} alt="" />
-          </div>
-          <div>
-            <img src={instaImg_5} alt="" />
-          </div>
-          <div>
-            <img src={instaImg_6} alt="" />
-          </div>
-          <div>
-            <img src={instaImg_7} alt="" />
-          </div>
-          <div>
-            <img src={instaImg_8} alt="" />
+        <div className="container">
+          <div className="grid grid-cols-4 gap-6">
+            <div>
+              <img src={instaImg_1} alt="" />
+            </div>
+            <div>
+              <img src={instaImg_2} alt="" />
+            </div>
+            <div>
+              <img src={instaImg_3} alt="" />
+            </div>
+            <div>
+              <img src={instaImg_4} alt="" />
+            </div>
+            <div>
+              <img src={instaImg_5} alt="" />
+            </div>
+            <div>
+              <img src={instaImg_6} alt="" />
+            </div>
+            <div>
+              <img src={instaImg_7} alt="" />
+            </div>
+            <div>
+              <img src={instaImg_8} alt="" />
+            </div>
           </div>
         </div>
       </div>
